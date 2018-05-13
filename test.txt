@@ -1,1 +1,2 @@
 helloo this is a git project.
+This is test project of GIT.

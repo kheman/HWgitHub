@@ -61,3 +61,5 @@ public class PageClass {
 		driver.findElement(savebutton).click();
 	}
 }
+
+	This is the dynamic method
