@@ -41,3 +41,4 @@ public class testNGClass {
 	
 	
 }
+	This is TestNG framework for automate application.
