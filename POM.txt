@@ -1,0 +1,63 @@
+package pageObjectModel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class PageClass {
+	WebDriver driver;
+
+	By usernamefield = By.name("txtUsername");
+	By passwordfield = By.id("txtPassword");
+	By loginbutton = By.id("btnLogin");
+	By recruitment = By.id("menu_recruitment_viewRecruitmentModule");
+	By addbutton = By.id("btnAdd");
+	By fname = By.name("addCandidate[firstName]");
+	By mname = By.name("addCandidate[middleName]");
+	By lname = By.name("addCandidate[lastName]");
+	By email = By.id("addCandidate_email");
+	By savebutton = By.id("btnSave");
+
+	public PageClass(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void username(String userID) {
+		driver.findElement(usernamefield).sendKeys(userID);
+	}
+
+	public void password(String passID) {
+		driver.findElement(passwordfield).sendKeys(passID);
+	}
+
+	public void clickLogin() {
+		driver.findElement(loginbutton).click();
+	}
+
+	public void recruit() {
+		driver.findElement(recruitment).click();
+	}
+
+	public void add() {
+		driver.findElement(addbutton).click();
+	}
+
+	public void firstnamefield(String firstname) {
+		driver.findElement(fname).sendKeys(firstname);
+	}
+
+	public void middlenamefield(String middlename) {
+		driver.findElement(mname).sendKeys(middlename);
+	}
+
+	public void lastnamefield(String lastname) {
+		driver.findElement(lname).sendKeys(lastname);
+	}
+
+	public void emailfield(String emailID) {
+		driver.findElement(email).sendKeys(emailID);
+	}
+
+	public void clicksave() {
+		driver.findElement(savebutton).click();
+	}
+}

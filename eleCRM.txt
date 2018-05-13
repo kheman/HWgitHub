@@ -1,0 +1,75 @@
+package com.elements;
+
+import java.util.regex.Pattern;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.sikuli.script.Screen;
+
+public class homePageEle {
+	WebDriver driver;
+	Screen myscreen;
+
+	@CacheLookup
+	@FindBy(xpath = "img-responsive")
+	WebElement logo;
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//small[contains(.,'Forgot Password?')]")
+	WebElement forgetPass;
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//button[@class='btn']")
+	WebElement signup;
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//a[contains(.,'Features')]")
+	WebElement features;
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//a[contains(.,'Pricing')]")
+	WebElement pricing;
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//a[contains(.,'Customers')]")
+	WebElement customers;
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//a[contains(.,'Contact')]")
+	WebElement contact;
+	@CacheLookup
+	@FindBy(how = How.NAME, using = "username")
+	WebElement username;
+	@CacheLookup
+	@FindBy(how = How.NAME, using = "password")
+	WebElement password;
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//input[@value='Login']")
+	WebElement login;
+	@CacheLookup
+	@FindBy(how = How.ID, using = "navbar-collapse")
+	WebElement header;
+	@CacheLookup
+	@FindBy(how = How.ID, using = "footer")
+	WebElement footer;
+
+	public homePageEle(WebDriver driver) {
+		this.driver = driver;
+
+	}
+
+	public void usernamefield(String userID) {
+		username.sendKeys(userID);
+	}
+
+	public void passwordfield(String pass) {
+		password.sendKeys(pass);
+	}
+
+	public void loginbutton() {
+		login.click();
+		
+	}
+
+	public void lefttags() {
+		myscreen= new Screen();
+		Pattern p1= new Pattern("C:\\Users\\User\\Desktop\\sikulisnapshot\\");
+	}
+}
