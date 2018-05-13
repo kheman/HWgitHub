@@ -70,3 +70,4 @@ public class homePageEle {
 
 	}
 
+	Methods to find elements 
