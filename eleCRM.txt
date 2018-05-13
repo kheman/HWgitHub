@@ -68,8 +68,5 @@ public class homePageEle {
 		
 	}
 
-	public void lefttags() {
-		myscreen= new Screen();
-		Pattern p1= new Pattern("C:\\Users\\User\\Desktop\\sikulisnapshot\\");
 	}
-}
+
